@@ -392,6 +392,7 @@
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 669Z55XK9Z;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -522,6 +523,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 669Z55XK9Z;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -542,6 +545,7 @@
 					"\"$(SRCROOT)/UjingWasher/Plugins/com.midea.pay\"",
 				);
 				PRODUCT_NAME = UjingWasher;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -555,6 +559,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				DEVELOPMENT_TEAM = 669Z55XK9Z;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -573,6 +579,7 @@
 					"\"$(SRCROOT)/UjingWasher/Plugins/com.midea.pay\"",
 				);
 				PRODUCT_NAME = UjingWasher;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

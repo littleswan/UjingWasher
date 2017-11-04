@@ -22,8 +22,9 @@ s.source       = { :git => "https://github.com/littleswan/UjingWasher.git", :tag
 s.requires_arc = true
 
 s.subspec 'Plugins' do |ss|
+
 ss.source_files = 'UjingWasher/Plugins/**/*.{h,m}'
-ss.resources  = "UjingWasher/Plugins/**/*.png"
+ss.resources  = 'UjingWasher/Plugins/**/*.png'
 
 end
 
@@ -34,4 +35,5 @@ s.frameworks = 'UIKit', 'CoreVideo', 'CoreMedia', 'AVFoundation', 'QuartzCore', 
 s.dependency 'Cordova'
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+
 end
