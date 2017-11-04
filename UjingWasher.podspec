@@ -28,7 +28,7 @@ ss.resources  = "UjingWasher/Plugins/**/*.png"
 end
 
 # 系统库依赖
-s.frameworks = 'UIKit','MobileCoreServices', 'CoreGraphics', 'Security', 'SystemConfiguration', 'AlipaySDK'
+s.frameworks = 'UIKit', 'CoreVideo', 'CoreMedia', 'AVFoundation', 'QuartzCore', 'Foundation', 'CFNetwork', 'CoreLocation', 'Security', 'SystemConfiguration', 'AlipaySDK'
 
 # Cordova 依赖
 s.dependency 'Cordova'
