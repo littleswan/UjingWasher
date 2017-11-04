@@ -10,6 +10,7 @@
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		0724B8371FADBA710071F090 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 0724B8361FADBA710071F090 /* config.xml */; };
 		0724B8391FADBAD60071F090 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 0724B8381FADBAD60071F090 /* www */; };
+		07EEE01E1FADC53200A2DEEC /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B490DF1167440D83C4BF96 /* AlipaySDK.framework */; };
 		096A69E4DE764BE59429A392 /* icon_light_on@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 59B7DB5BE812442EBC7D2B6B /* icon_light_on@2x.png */; };
 		0E328822619E4C05A8D44C7C /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9A5800C422483B993115CA /* CDVLogger.m */; };
 		13C6BD556FAC4332BA9A528A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B71E0BF7A8834EBA9F95DF9A /* CoreVideo.framework */; };
@@ -41,7 +42,6 @@
 		96D5EEAAD0CA4AF0B589D805 /* icon_photo_normal@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = CC6B27E12435475887498DC9 /* icon_photo_normal@2x.png */; };
 		9DDD9D7B48944D83BB8029A6 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C57069EE90C4702B4E71DEB /* CDVFile.m */; };
 		A0130758B12E493BA397ADE9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF970BCC4884B5B84370C65 /* CoreLocation.framework */; };
-		A0248A79E2AC4CB883622D2D /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B490DF1167440D83C4BF96 /* AlipaySDK.framework */; };
 		A57F3E69AB8B42639973F2CD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8801D1309BCD4E25B2640859 /* libz.tbd */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A90738792BFD422AB4F3D62F /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B33B7B6ABF2F41248EF56DDD /* AlipaySDK.bundle */; };
 		A92BCD1FE1FA47C09A260D40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4BCD408FCB495CA838F169 /* AVFoundation.framework */; };
@@ -176,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07EEE01E1FADC53200A2DEEC /* AlipaySDK.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				13C6BD556FAC4332BA9A528A /* CoreVideo.framework in Frameworks */,
 				E3A19AFB8F88491B9BBE9B55 /* CoreMedia.framework in Frameworks */,
@@ -189,7 +190,6 @@
 				68E0FB8E0CC547E0BFA4F319 /* CFNetwork.framework in Frameworks */,
 				541D73A1A95E4C928A2C43EE /* libc++.tbd in Frameworks */,
 				A57F3E69AB8B42639973F2CD /* libz.tbd in Frameworks */,
-				A0248A79E2AC4CB883622D2D /* AlipaySDK.framework in Frameworks */,
 				5A66E69CC1CC46A69EE4000B /* ImageIO.framework in Frameworks */,
 				A0130758B12E493BA397ADE9 /* CoreLocation.framework in Frameworks */,
 				2789695EB46D4156A273BE79 /* AudioToolbox.framework in Frameworks */,
@@ -529,7 +529,7 @@
 				DEVELOPMENT_TEAM = 669Z55XK9Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"UjingWasher/Plugins/com.midea.pay\"",
+					"$(PROJECT_DIR)/UjingWasher/Plugins/com.midea.pay",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -537,6 +537,13 @@
 				GCC_PREFIX_HEADER = "UjingWasher/UjingWasher-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"$(SRCROOT)/UjingWasher/Plugins/com.midea.pay/AlipaySDK.framework/Headers",
+				);
 				INFOPLIST_FILE = "UjingWasher/UjingWasher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -565,12 +572,19 @@
 				DEVELOPMENT_TEAM = 669Z55XK9Z;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"UjingWasher/Plugins/com.midea.pay\"",
+					"$(PROJECT_DIR)/UjingWasher/Plugins/com.midea.pay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UjingWasher/UjingWasher-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = (
+					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/include\"",
+					"\"$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+					"$(SRCROOT)/UjingWasher/Plugins/com.midea.pay/AlipaySDK.framework/Headers",
+				);
 				INFOPLIST_FILE = "UjingWasher/UjingWasher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
